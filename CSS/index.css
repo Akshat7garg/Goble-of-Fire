@@ -1,0 +1,688 @@
+/* css for boby and html part */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #293437;
+    color: #fff4e2;
+}
+* , *::after , *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+html::-webkit-scrollbar{
+    width: 9px;
+}
+html::-webkit-scrollbar-thumb{
+    width: 9px;
+    border-radius: 3px;
+    background-color: #b69451;
+}
+input[type="checkbox"]{
+    display: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* css for the introductry part of the page which conains loader */
+.intro{
+    display: flex;
+    height: 100vh;
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: hiding 5.4s ease .25ms forwards;
+}
+@keyframes hiding {
+    0% , 99%{
+        display: flex;
+    }
+    100%{
+        display: none;
+    }
+}
+.intro-logo img{
+    height: 153px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader{
+    width: 468px;
+    height: 9px;
+    border-radius: 9px;
+    background-color: #011015;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin: 27px 0px;
+}
+.loader::after{
+    content: '';
+    height: 9px;
+    width: 0px;
+    border-radius: 9px;
+    background-color: #b69451;
+    box-shadow: 0px 0px 16px #b69451;
+    position: absolute;
+    animation: stretching 5.4s ease .25ms forwards;
+}
+@keyframes stretching {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 468px;
+    }
+}
+.intro-name{
+    font-size: 36px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: glowing 2s linear infinite;
+}
+@keyframes glowing {
+    0% , 100%{
+        color: #a0e7ff;
+        text-shadow: 0px 0px 9px #a0e7ff;
+    }
+    50%{
+        color: #2c768f;
+        text-shadow: 0px 0px 9px #2c768f;
+    }
+}
+
+/* css for the main-body of the page */
+.main-body{
+    background: url('/IMG//background.webp');
+    background-repeat: no-repeat;
+    background-size: 100% 2358px;
+    height: fit-content;
+    display: block;
+    animation: visiting 5.4s ease .25ms forwards;
+}
+@keyframes visiting {
+    0% , 99%{
+        display: none;
+    }
+    100%{
+        display: block;
+    }
+}
+
+/* css for the upper-body of the page */
+.line{
+    width: 54%;
+    position: relative;
+    left: 23%;
+    right: 23%;
+}
+/* css for header tag */
+.header{
+    height: 81px;
+    background: rgb(0,0,0,0.7);
+    margin: 0px 72px;
+    padding: 4.5px 90px;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 900;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 45px;
+    box-shadow: 0px 0px 16px #b69451;
+}
+
+/* left part of the header */
+.left-header{
+    width: 243px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo , .name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    height: 72px;
+}
+.name{
+    font-size: 27px;
+    color: #b69451;
+}
+
+/* right side of header */
+.right-header{
+    width: 405px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+.right-header a{
+    padding: 7px;
+    color: #fff4e2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.right-header a::after{
+    content: '';
+    height: 3px;
+    border-radius: 3px;
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    background-color: #b69451;
+    transition: all 0.3s linear;
+}
+.right-header a:hover{
+    color: #b69451;
+}
+#opt1:hover::after , #opt1:active::after{
+    width: 70px;
+}
+#opt2:hover::after , #opt2:active::after{
+    width: 78px;
+}
+#opt3:hover::after , #opt3:active::after{
+    width: 90px;
+}
+#opt4:hover::after , #opt4:active::after{
+    width: 86px;
+}
+
+/* css for over-view section of the page */
+.overview{
+    height: 405px;
+    padding: 18px 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 39%;
+    height: 60%;
+}
+.heading{
+    font-size: 36px;
+    font-weight: bold;
+    color: #b69451;
+    text-shadow: 0px 0px 16px #654914;
+}
+.data{
+    font-size: 21px;
+}
+.right{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right img{
+    height: 360px;
+    filter: drop-shadow(0px 0px 16px #b69451);
+}
+.game-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    height: 54px;
+}
+.game-link a{
+    height: 45px;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 7px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #b69451;
+    border: 3px solid #b69451;
+    transition: all 0.3s linear;
+}
+.game-link a:hover{
+    background-color: #b69451;
+    color: #293437;
+    box-shadow: 0px 0px 16px #b69451;
+}
+
+/* css for the video plang section */
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 18px 54px;
+}
+.title{
+    font-size: 45px;
+    font-weight: bold;
+    color: #b69451;
+    text-shadow: 0px 0px 16px #654914;
+}
+.content{
+    font-size: 21px;
+    margin: 18px 0px;
+    text-align: justify;
+}
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.video > img{
+    position: absolute;
+    height: 549px;
+    width: 1350px;
+}
+.video-box1{
+    background-image: url('/IMG/video-frame.webp');
+    background-repeat: no-repeat;
+    background-size: 1419px 603px;
+    position: relative;
+    height: 603px;
+    width: 1419px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-box1 label{
+    height: 171px;
+    width: 171px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+.video-box1 label img{
+    width: 171px;
+    height: 171px;
+    cursor: pointer;
+    position: absolute;
+    transition: all 1s ease;
+}
+#three{
+    height: 65px;
+    width: 56px;
+    margin-left: 15px;
+}
+.video-box1 label:hover > #one{
+    transform: rotate(90deg);
+}
+.video-box1 label:hover > #two{
+    transform: rotate(-90deg);
+}
+.video-box1 label:hover > #three{
+    scale: 1.1;
+}
+
+/* css for game section */
+.game-area{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px;
+}
+.game-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 18px;
+    width: 390px;
+}
+.game-pad{
+    height: 513px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/IMG/box-bg.webp');
+    background-size: 100% 513px;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.game-pad a img{
+    clip-path: polygon(0 25%,0 75%,50% 100%,100% 75%,100% 25%,50% 0);
+    height: 70%;
+    left: 10%;
+    position: absolute;
+    top: 15%;
+    width: 80%;
+}
+.icon{
+    height: auto;
+    position: absolute;
+    width: 16%;
+}
+#icon-top{
+    right: 10.5%;
+    top: 6.2%;
+}
+#icon-bottom{
+    bottom: 6.2%;
+    left: 9.8%;
+}
+.game-description{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 21px;
+    margin-top: 11px;
+}
+.game-description a{
+    padding: 7px;
+    color: #b69451;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.game-description a::after{
+    content: '';
+    height: 3px;
+    border-radius: 3px;
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    background-color: #b69451;
+    transition: all 0.3s linear;
+}
+.game-description a:hover::after {
+    width: 173px;
+}
+.game-description p{
+    text-align: center;
+    margin-top: 9px;
+}
+#line3{
+    margin-bottom: 27px;
+}
+
+/* css for the footer section */
+.footer{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 504px;
+    width: 100%;
+    background-color: black;
+    position: relative;
+    z-index: 100;
+    box-shadow: 27px -36px 36px black , -27px -36px 36px black;
+}
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.footer-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    height: 369px;
+}
+.up{
+    display: flex;
+    font-size: 33px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #b69451;
+    text-shadow: 0px 0px 16px #b69451;
+}
+.link-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+.links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.links img{
+    width: 72%;
+}
+.link{
+    position: relative;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link a{
+    color: #fff4e2;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+.link a:hover{
+    color: #b69451;
+    scale: 1.1;
+}
+.link a:hover + .text{
+    scale: 1;
+}
+.text{
+    position: absolute;
+    bottom: 4px;
+    scale: 0;
+    left: 46px;
+    border: 3px solid #b69451;
+    border-radius: 9px;
+    padding: 6px;
+    transition: all .3s ease;
+}
+.portfolio{
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.portfolio a{
+    padding: 7px;
+    color: #b69451;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.portfolio a::after{
+    content: '';
+    height: 3px;
+    border-radius: 3px;
+    width: 0px;
+    position: absolute;
+    bottom: 0;
+    background-color: #b69451;
+    transition: all 0.3s linear;
+}
+.portfolio a:hover::after{
+    width: 153px;
+}
+.footer-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    height: 369px;
+}
+.footer-right input , .footer-right textarea{
+    color: #fff4e2;
+    outline: none;
+}
+.head{
+    display: flex;
+    font-size: 33px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #b69451;
+    text-shadow: 0px 0px 16px #b69451;
+}
+.mail-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 306px;
+}
+.upper{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.upper > input{
+    background-color: transparent;
+    border: 3px solid #b69451;
+    border-radius: 7px;
+    width: 47%;
+    height: 36px;
+    font-size: 18px;
+    padding: 7px;
+}
+.mail-box > input[type="text"]{
+    background-color: transparent;
+    border: 3px solid #b69451;
+    border-radius: 7px;
+    width: 90%;
+    height: 36px;
+    font-size: 18px;
+    padding: 7px;
+}
+.mail-box > textarea{
+    background-color: transparent;
+    border: 3px solid #b69451;
+    border-radius: 7px;
+    width: 90%;
+    height: 144px;
+    font-size: 18px;
+    padding: 7px;
+}
+.mail-box > input[type="submit"]{
+    height: 45px;
+    font-size: 21px;
+    font-weight: 600;
+    padding: 7px;
+    border-radius: 7px;
+    text-decoration: none;
+    color: #b69451;
+    border: 3px solid #b69451;
+    transition: all 0.3s linear;
+    cursor: pointer;
+    background-color: transparent;
+}
+.mail-box > input[type="submit"]:hover{
+    background-color: #b69451;
+    color: black;
+    box-shadow: 0px 0px 16px #b69451;
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-size: 21px;
+    height: 65px;
+}
+.bottom p span{
+    color: #b69451;
+}
+
+/* for all pop-up options */
+.pop-up{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pop-up >input[type="checkbox"]:checked +.pop-box{
+    height: 603px;
+}
+.pop-box{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    height: 0px;
+    width: 80%;
+    background: black;
+    left: 10%;
+    border-radius: 18px;
+    z-index: 10000;
+    box-shadow: 0px 0px 171px #b69451;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+.cross{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    justify-content: center;
+    height: 72px;
+    top: 0;
+    width: 72px;
+    border: 6px solid #b69451;
+    border-radius: 18px;
+    right: 0;
+}
+.cross label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cross label i{
+    color: #b69451;
+    font-size: 45px;
+    transition: all .3s ease;
+}
+.cross label:hover >i{
+    transform: scale(.7);
+}
+.pop-content video{
+    height: 540px;
+    width: 100%;
+}

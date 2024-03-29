@@ -1,0 +1,176 @@
+/* css for all body and html tags */
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+* , *::before , *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #011015;
+    color: #a3f8ab;
+}
+
+/* css for introductry loader section */
+.intro{
+    height: 100vh;
+    position: relative;
+    z-index: 10000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: hiding 5.4s ease .25ms forwards;
+}
+@keyframes hiding {
+    0% , 99%{
+        display: flex;
+    }
+    100%{
+        display: none;
+    }
+}
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 270px;
+}
+.loader-top{
+    position: relative;
+    height: 207px;
+    width: 207px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+}
+.ring{
+    position: absolute;
+    border: 0px solid #011015;
+    height: 198px;
+    width: 198px;
+    border-radius: 50%;
+}
+.ring:nth-child(1){
+    border-bottom-width: 9px;
+    border-color: #ff00ff;
+    animation: rolling1 2s linear infinite;
+}
+.ring:nth-child(2){
+    border-right-width: 9px;
+    border-color: #00f7ff;
+    animation: rolling2 2s linear infinite;
+}
+.ring:nth-child(3){
+    border-top-width: 9px;
+    border-color: #00ff0d;
+    animation: rolling3 2s linear infinite;
+}
+@keyframes rolling1 {
+    0%{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+@keyframes rolling2 {
+    0%{
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+@keyframes rolling3 {
+    0%{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100%{
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+.loader-bottom{
+    font-size: 36px;
+    font-weight: bolder;
+    animation: glowing 2s linear infinite;
+}
+@keyframes glowing {
+    0% , 100%{
+        color: #a0e7ff;
+        text-shadow: 0px 0px 9px #a0e7ff;
+    }
+    50%{
+        color: #2c768f;
+        text-shadow: 0px 0px 9px #2c768f;
+    }
+}
+.body{
+    background: url("/IMG/bg.jpg"); 
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: visiting 5.4s ease .25ms forwards;
+    color: #050f05;
+}
+@keyframes visiting {
+    0% , 99%{
+        display: none;
+    }
+    100%{
+        display: flex;
+    }
+}
+
+#scoreBox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34); 
+    transform: scale(1.02);
+    border-radius: 9px;
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 8px;
+}
