@@ -1,27 +1,26 @@
 # Goblet-of-Fire
 
-<hr>
-
 Games Offered:
 
-Chess (with singleplayer and multiplayer options)
-Sudoku
-2048
-Snake Feeder
-Technologies Used:
+Chess (with singleplayer and multiplayer options) <br>
+Sudoku <br>
+2048 <br>
+Snake Feeder <br>
 
 <hr>
+
+Technologies Used:  <br>
 
 Front-End Development:
-HTML: Provides the structure and content of the webpages.
-CSS: Defines the styling and visual appearance of the webpages.
-JavaScript: Adds interactivity and dynamic behavior to the webpages, likely handling user input and game logic.
 
-<hr>
-
+HTML: Provides the structure and content of the webpages. <br>
+CSS: Defines the styling and visual appearance of the webpages. <br>
+JavaScript: Adds interactivity and dynamic behavior to the webpages, likely handling user input and game logic. <br>
+<br>
 Back-End Development:
-Node.js: A JavaScript runtime environment that allows the website to run server-side scripts, possibly handling things like user accounts, game data storage, or the multiplayer chess functionality.
-Python: Potentially used for server-side tasks as well, or it could be powering some of the game logic behind the scenes.
+
+Node.js: A JavaScript runtime environment that allows the website to run server-side scripts, possibly handling things like user accounts, game data storage, or the multiplayer chess functionality. <br>
+Python: Potentially used for server-side tasks as well, or it could be powering some of the game logic behind the scenes. <br>
 
 <hr>
 
